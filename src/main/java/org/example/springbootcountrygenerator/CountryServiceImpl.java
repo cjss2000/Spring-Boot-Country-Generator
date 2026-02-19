@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 
@@ -23,19 +24,20 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
-    public Country removeById(int id){
-        for (Country c : list){
-            if (c.getCountryID() == id){
+    public Country removeById(UUID id) {
+        for (Country c : list) {
+            if (c.getCountryID().equals(id)) {
                 return c;
             }
+
         }
         return null;
     }
 
     @Override
-  public Country getById(int id){
+  public Country getById(UUID id){
         for (Country c : list){
-            if (c.equals(id)){
+            if (c.getCountryID().equals(id)){
                 return c;
             }
         }

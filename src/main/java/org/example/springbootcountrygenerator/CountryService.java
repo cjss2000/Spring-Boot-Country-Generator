@@ -1,14 +1,15 @@
 package org.example.springbootcountrygenerator;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface CountryService {
 
     Country add(Country country);
 
-    Country removeById(int id);
+    Country removeById(UUID id);
 
-    Country getById(int id);
+    Country getById(UUID id);
 
     List<Country> getAll();
 }
