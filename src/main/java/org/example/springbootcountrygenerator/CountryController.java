@@ -39,4 +39,10 @@ public class CountryController {
         return country;
 
     }
+    @GetMapping("/{name}")
+    public Country retrieveCountry(@PathVariable String countryName){
+        return countryService.countryName(countryName);
+
+
+    }
 }

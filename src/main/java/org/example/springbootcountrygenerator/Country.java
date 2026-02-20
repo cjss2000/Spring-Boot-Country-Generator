@@ -16,6 +16,38 @@ import java.util.UUID;
 
 public class Country {
 
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public String getCountryLang() {
+        return countryLang;
+    }
+
+    public void setCountryLang(String countryLang) {
+        this.countryLang = countryLang;
+    }
+
+    public String getCountryCapital() {
+        return countryCapital;
+    }
+
+    public void setCountryCapital(String countryCapital) {
+        this.countryCapital = countryCapital;
+    }
+
+    public String getCountryCurrency() {
+        return countryCurrency;
+    }
+
+    public void setCountryCurrency(String countryCurrency) {
+        this.countryCurrency = countryCurrency;
+    }
+
     String countryName;
     String countryLang;
     String countryCurrency;

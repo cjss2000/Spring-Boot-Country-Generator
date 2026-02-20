@@ -12,4 +12,7 @@ public interface CountryService {
     Country getById(UUID id);
 
     List<Country> getAll();
+
+    Country countryName(String countryName);
 }
+
