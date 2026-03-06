@@ -1,6 +1,5 @@
-package org.example.springbootcountrygenerator;
+package org.example.springbootcountrygenerator.countries;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -58,6 +57,7 @@ public class CountryServiceImpl implements CountryService {
     @Override
     public Country countryName(String countryName){
         Country[] countries = template.getForObject(API_URL, Country[].class, countryName);
+
         System.out.println(Arrays.toString(countries));
         return null;
     }

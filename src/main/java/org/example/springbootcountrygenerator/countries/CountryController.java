@@ -1,6 +1,5 @@
-package org.example.springbootcountrygenerator;
+package org.example.springbootcountrygenerator.countries;
 
-import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,6 +38,7 @@ public class CountryController {
         return country;
 
     }
+
     @GetMapping("/{name}")
     public Country retrieveCountry(@PathVariable String countryName){
         return countryService.countryName(countryName);

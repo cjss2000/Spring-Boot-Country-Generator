@@ -1,4 +1,4 @@
-package org.example.springbootcountrygenerator;
+package org.example.springbootcountrygenerator.countries;
 
 import java.util.List;
 import java.util.UUID;

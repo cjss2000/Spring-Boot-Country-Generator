@@ -1,4 +1,4 @@
-package org.example.springbootcountrygenerator;
+package org.example.springbootcountrygenerator.countries;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,6 +15,11 @@ import java.util.UUID;
 @NoArgsConstructor
 
 public class Country {
+
+    String countryName;
+    String countryLang;
+    String countryCurrency;
+    String countryCapital;
 
     public String getCountryName() {
         return countryName;
@@ -48,10 +53,6 @@ public class Country {
         this.countryCurrency = countryCurrency;
     }
 
-    String countryName;
-    String countryLang;
-    String countryCurrency;
-    String countryCapital;
 
     public UUID getCountryID() {
         return countryID;
