@@ -1,4 +1,4 @@
-package org.example.springbootcountrygenerator;
+package org.example.springbootcountrygenerator.countries;
 
 import java.util.List;
 import java.util.UUID;
@@ -12,4 +12,7 @@ public interface CountryService {
     Country getById(UUID id);
 
     List<Country> getAll();
+
+    Country countryName(String countryName);
 }
+
