@@ -1,17 +1,10 @@
 package org.example.springbootcountrygenerator.starwars;
 
-import org.example.springbootcountrygenerator.countries.Country;
-import org.example.springbootcountrygenerator.countries.CountryService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.UUID;
 
 
 @RestController
-@RequestMapping("/StarsWarsChar/")
+@RequestMapping("/starwars")
 public class StarWarsController {
 
 
@@ -22,8 +15,8 @@ public class StarWarsController {
         this.starWarsService = starWarsService;
     }
 
-    @GetMapping("/person")
-    public Person retrieveRandonPerson(){
+    @GetMapping("/character")
+    public PersonDTO retrieveRandonPerson(){
         return starWarsService.getPerson();
     }
 

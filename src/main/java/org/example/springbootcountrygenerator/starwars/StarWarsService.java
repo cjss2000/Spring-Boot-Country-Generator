@@ -1,6 +1,6 @@
 package org.example.springbootcountrygenerator.starwars;
 
-import org.example.springbootcountrygenerator.jokes.Joke;
+import org.example.springbootcountrygenerator.starwars.response.ApiResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 @Service
@@ -16,9 +16,9 @@ public class StarWarsService {
             this.restTemplate = restTemplate;
         }
 
-        public Person getPerson(){
-            Person person = restTemplate.getForObject(SW_URL, Person.class);
-            return person;
+        public PersonDTO getPerson(){
+            ApiResponse response = restTemplate.getForObject(SW_URL, ApiResponse.class);
+            return response.getProperties();
         }
 
 
