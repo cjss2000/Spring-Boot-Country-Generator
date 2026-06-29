@@ -1,26 +1,23 @@
 package org.example.springbootcountrygenerator.starwars;
 
-import org.example.springbootcountrygenerator.jokes.Joke;
+import org.example.springbootcountrygenerator.starwars.reponse.ApiResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
 @Service
-
-
 public class StarWarsService {
 
+    private static final String SW_URL = "https://www.swapi.tech/api/people/1";
+    private final RestTemplate restTemplate;
 
-        private static final String SW_URL = "https://www.swapi.tech/api/people/1";
-        private final RestTemplate restTemplate;
-
-        public StarWarsService(RestTemplate restTemplate){
-            this.restTemplate = restTemplate;
-        }
-
-        public Person getPerson(){
-            Person person = restTemplate.getForObject(SW_URL, Person.class);
-            return person;
-        }
-
-
+    public StarWarsService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
     }
+
+    public PersonDTO getPerson() {
+        ApiResponse response = restTemplate.getForObject(SW_URL, ApiResponse.class);
+        return response.getProperties();
+    }
+
+}
 
