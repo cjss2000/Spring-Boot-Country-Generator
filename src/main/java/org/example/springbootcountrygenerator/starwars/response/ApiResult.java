@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.springbootcountrygenerator.starwars.PersonDTO;
 
 @NoArgsConstructor
 @Getter
@@ -11,7 +12,13 @@ import lombok.Setter;
 
 public class ApiResult {
 
-    private String message;
-    private ApiResult result;
+    private PersonDTO properties;
 
+    public PersonDTO getProperties() {
+        return properties;
+    }
+
+    public void setProperties(PersonDTO properties) {
+        this.properties = properties;
+    }
 }

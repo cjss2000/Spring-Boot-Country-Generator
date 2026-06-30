@@ -1,20 +1,28 @@
 package org.example.springbootcountrygenerator.starwars.response;
 
+import lombok.Getter;
 import org.example.springbootcountrygenerator.starwars.PersonDTO;
-
+@Getter
 public class ApiResponse {
 
-    private PersonDTO properties;
+    private String message;
+    private ApiResult result;
 
-    public PersonDTO getProperties() {
-        return properties;
+    public ApiResult getResult() {
+        return result;
     }
 
-    public void setProperties(PersonDTO properties) {
-        this.properties = properties;
+    public void setResult(ApiResult result) {
+        this.result = result;
     }
 
+    public String getMessage() {
+        return message;
+    }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
 
 
