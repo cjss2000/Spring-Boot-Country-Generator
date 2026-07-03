@@ -1,18 +1,15 @@
 package org.example.springbootcountrygenerator.starwars.response;
 
-import lombok.Getter;
-import org.example.springbootcountrygenerator.starwars.PersonDTO;
-@Getter
-public class ApiResponse {
+public class ApiFilmResponse {
 
     private String message;
-    private ApiResult result;
+    private ApiFilmResult result;
 
-    public ApiResult getResult() {
+    public ApiFilmResult getResult() {
         return result;
     }
 
-    public void setResult(ApiResult result) {
+    public void setApiFilmResult(ApiFilmResult apiFilmResult) {
         this.result = result;
     }
 
@@ -23,7 +20,6 @@ public class ApiResponse {
     public void setMessage(String message) {
         this.message = message;
     }
-
 
 
 }
