@@ -3,7 +3,7 @@ package org.example.springbootcountrygenerator.starwars.response;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.springbootcountrygenerator.starwars.PersonDTO;
+import org.example.springbootcountrygenerator.starwars.CharacterDTO;
 
 @NoArgsConstructor
 @Getter
@@ -11,13 +11,13 @@ import org.example.springbootcountrygenerator.starwars.PersonDTO;
 
 public class ApiCharacterResult {
 
-    private PersonDTO properties;
+    private CharacterDTO properties;
 
-    public PersonDTO getProperties() {
+    public CharacterDTO getProperties() {
         return properties;
     }
 
-    public void setProperties(PersonDTO properties) {
+    public void setProperties(CharacterDTO properties) {
         this.properties = properties;
     }
 }

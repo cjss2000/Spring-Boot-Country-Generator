@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class CharacterController {
 
 
-        private final CharacterService characterService;
-
+    private final CharacterService characterService;
 
 
     public CharacterController(CharacterService characterService) {
@@ -18,8 +17,13 @@ public class CharacterController {
     }
 
     @GetMapping("/character")
-    public PersonDTO retrieveRandonPerson(){
+    public CharacterDTO retrieveRandomPerson() {
         return characterService.getPerson();
+    }
+
+    @PostMapping("/character/save")
+    public String saveRandomPerson() {
+        return characterService.saveCharacter(characterService.getPerson());
     }
 
 

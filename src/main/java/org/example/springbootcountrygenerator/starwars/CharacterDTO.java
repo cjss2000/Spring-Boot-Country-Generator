@@ -1,36 +1,28 @@
 package org.example.springbootcountrygenerator.starwars;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 
 @Getter
 @Setter
-
-
-public class PersonDTO {
+public class CharacterDTO {
 
     @JsonProperty("eye_color")
-
     private String eyeColor;
 
     @JsonProperty("birth_year")
-
     private String birthYear;
 
+    private String name;
+    private String height;
 
-    public PersonDTO(String name, String height, String eyeColor, String birthYear ){
+    public CharacterDTO(String name, String height, String eyeColor, String birthYear) {
         this.name = name;
         this.height = height;
         this.eyeColor = eyeColor;
         this.birthYear = birthYear;
     }
-
-
-    private String name;
 
     public String getHeight() {
         return height;
@@ -48,8 +40,6 @@ public class PersonDTO {
         return birthYear;
     }
 
-    private String height;
-
     public void setName(String name) {
         this.name = name;
     }
@@ -65,12 +55,5 @@ public class PersonDTO {
     public void setBirthYear(String birthYear) {
         this.birthYear = birthYear;
     }
-
-
-
-
-
-
-
 
 }

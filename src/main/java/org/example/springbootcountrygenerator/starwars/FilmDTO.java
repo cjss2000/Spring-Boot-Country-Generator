@@ -30,9 +30,4 @@ public class FilmDTO {
         this.episodeId = episodeId;
     }
 
-
-
-
-
-
 }
