@@ -1,9 +1,7 @@
 package org.example.springbootcountrygenerator.starwars;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -11,7 +9,7 @@ import lombok.Setter;
 @Setter
 
 
-public class PersonDTO {
+public class CharacterDTO {
 
     @JsonProperty("eye_color")
 
@@ -21,24 +19,28 @@ public class PersonDTO {
 
     private String birthYear;
 
+    private String name;
 
-    public PersonDTO(String name, String height, String eyeColor, String birthYear ){
+    private String height;
+
+
+    public CharacterDTO(String name, String height, String eyeColor, String birthYear ){
         this.name = name;
         this.height = height;
         this.eyeColor = eyeColor;
         this.birthYear = birthYear;
     }
 
+//    public CharacterDTO(String eyeColor, String birthYear){
+//        this.eyeColor = eyeColor;
+//        this.birthYear = birthYear;
+//    }
+    //why didn't this constructor work? I'm assuming because I need the UUID included in the object? however the constructor above doens't have it either?
 
-    private String name;
 
-    public String getHeight() {
-        return height;
-    }
 
-    public String getName() {
-        return name;
-    }
+
+
 
     public String getEyeColor() {
         return eyeColor;
@@ -48,7 +50,13 @@ public class PersonDTO {
         return birthYear;
     }
 
-    private String height;
+    public String getHeight() {
+        return height;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;

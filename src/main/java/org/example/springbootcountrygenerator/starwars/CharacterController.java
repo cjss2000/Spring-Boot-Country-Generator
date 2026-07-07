@@ -18,9 +18,13 @@ public class CharacterController {
     }
 
     @GetMapping("/character")
-    public PersonDTO retrieveRandonPerson(){
+    public CharacterDTO retrieveRandonPerson(){
         return characterService.getPerson();
     }
 
+    @PostMapping("/character/save")
+    public String saveRandomPerson(){
+       return characterService.saveCharacter(characterService.getPerson());
+    }
 
 }
