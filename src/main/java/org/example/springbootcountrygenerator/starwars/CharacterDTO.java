@@ -19,14 +19,17 @@ public class CharacterDTO {
 
     private String birthYear;
 
+    @JsonProperty("name")
+
     private String name;
 
-    private String height;
+//    @JsonProperty("height")
+//
+//    private String height;
 
 
-    public CharacterDTO(String name, String height, String eyeColor, String birthYear ){
+    public CharacterDTO(String name, String eyeColor, String birthYear ){
         this.name = name;
-        this.height = height;
         this.eyeColor = eyeColor;
         this.birthYear = birthYear;
     }
@@ -50,9 +53,7 @@ public class CharacterDTO {
         return birthYear;
     }
 
-    public String getHeight() {
-        return height;
-    }
+
 
     public String getName() {
         return name;
@@ -62,9 +63,7 @@ public class CharacterDTO {
         this.name = name;
     }
 
-    public void setHeight(String height) {
-        this.height = height;
-    }
+
 
     public void setEyeColor(String eyeColor) {
         this.eyeColor = eyeColor;

@@ -18,9 +18,13 @@ public class Character {
     @Column(name = "Birth_day")
     private String birthDate;
 
-    public Character(String eyeColor, String birthDate){
+    @Column(name = "name")
+    private String name;
+
+    public Character(String eyeColor, String birthDate, String name){
         this.eyeColor = eyeColor;
         this.birthDate = birthDate;
+        this.name = name;
     }
 
     public Character() {
@@ -51,7 +55,13 @@ public class Character {
         this.birthDate = birthDate;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
 }

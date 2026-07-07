@@ -37,12 +37,14 @@ public class CharacterService {
         }
 
         public String saveCharacter(CharacterDTO characterDTO){
-            Character character = new Character(characterDTO.getEyeColor(), characterDTO.getBirthYear());
+            Character character = new Character(characterDTO.getEyeColor(), characterDTO.getBirthYear(), characterDTO.getName());
             characterRepository.save(character);
                     return " Character has been successfully added";
         }
 
-
+//        public CharacterDTO findCharacterByName(CharacterDTO characterDTO){
+//
+//        }
 
     }
 
