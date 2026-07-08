@@ -1,6 +1,8 @@
 package org.example.springbootcountrygenerator.starwars;
 
+import org.example.springbootcountrygenerator.starwars.enums.TestEnum;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -31,6 +33,7 @@ public class CharacterController {
 
     @PostMapping("/character/delete/{name}")
     public void deletebyName(@PathVariable String name) {
+        ResponseEntity.ok(TestEnum.INVALID_USER_ID);
         characterService.deleteCharacter(name);
     }
 }

@@ -1,0 +1,13 @@
+1. Put everything in packages - controller, service
+2. We want to have a Response from our own APIs, for that we can utilize the ResponseEntity and its methods:
+https://dev.to/devcorner/mastering-responseentity-and-controller-in-spring-boot-agc
+
+It needs to hold CharacterDTO, thereofore you will need to update the method signatures of some of your SERVICE and CONTROLLER methods
+
+Make sure to add methods to CharacterService to retrieve single character by either id or name and handle there a case when wrong name/id is passed
+resulting in null, which then needs to be handled in Controller as ResponseEntity.badRequest();
+
+For error handling of such cases you could follow this pattern:
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid Request");
+
+But I'd like to ask you create an enum for ErrorMessages, use this article for inspiration: https://www.baeldung.com/java-enum-values
