@@ -45,6 +45,12 @@ public class CharacterService {
 //        public CharacterDTO findCharacterByName(CharacterDTO characterDTO){
 //
 //        }
+        public Iterable<Character> findAllCharacters(){
+          return characterRepository.findAll();
+        }
 
+        public void deleteCharacter(String NametoDelete){
+            characterRepository.deleteCharacterByName(NametoDelete);
+        }
     }
 

@@ -17,6 +17,11 @@ public class CharacterController {
 
     }
 
+    @GetMapping("/allCharacters")
+    public Iterable findAllCharacters() {
+        return characterService.findAllCharacters();
+    }
+
     @GetMapping("/character")
     public CharacterDTO retrieveRandonPerson(){
         return characterService.getPerson();
@@ -27,4 +32,8 @@ public class CharacterController {
        return characterService.saveCharacter(characterService.getPerson());
     }
 
+    @GetMapping("/character/delete/{name}")
+    public void deletebyName(@PathVariable String name){
+       characterService.deleteCharacter(name);
+    }
 }
